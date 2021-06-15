@@ -16,7 +16,7 @@ include $REX['INCLUDE_PATH'] . '/addons/community/plugins/auth/classes/class.rex
 include $REX['INCLUDE_PATH'] . '/addons/community/plugins/auth/classes/class.rex_com_auth.inc.php';
 
 ## Register extension points
-rex_register_extension('REX_NAVI_CLASSNAME', create_function('', 'return "rex_com_navigation";'));
+rex_register_extension('REX_NAVI_CLASSNAME', function() { return "rex_com_navigation"; });
 
 if (isset($I18N) && is_object($I18N)) {
   $I18N->appendFile($REX['INCLUDE_PATH'] . '/addons/community/plugins/auth/lang');
